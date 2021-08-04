@@ -1,0 +1,1 @@
+SELECT  re.Resources_Name,re.Description,ro.Role_Name from roleresources rr inner join Role ro ON rr.Role_Id=ro.id INNER join  resources re ON rr.Resoources_Id=re.Id      inner JOIN authorities a ON a.RR_Id=rr.Id where a.User_ID=".$_SESSION['user_Id']
